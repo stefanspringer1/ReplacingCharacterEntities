@@ -28,7 +28,7 @@ public struct ReplacingCharacterEntities: ExpressionMacro {
         
         var text = literalSegment.content.text
         
-        text = try text.replacingNamedCharacterEntitiesWithString()
+        text = try text.replacingCharacterEntitiesWithString()
         
         let expr: ExprSyntax = "\"\(raw: text)\""
         return ExprSyntax(expr)

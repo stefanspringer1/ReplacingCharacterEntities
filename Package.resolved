@@ -32,8 +32,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/stefanspringer1/SwiftUtilities.git",
       "state" : {
-        "revision" : "95464d61663f0fe532f0b514a3015fafe01fbd9f",
-        "version" : "0.1.35"
+        "revision" : "b056a6524ecec1b21743984010346600abd30b68",
+        "version" : "0.1.36"
       }
     }
   ],
