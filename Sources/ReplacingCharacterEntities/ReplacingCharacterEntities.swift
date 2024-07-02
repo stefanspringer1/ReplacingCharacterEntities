@@ -12,4 +12,4 @@ import Foundation
 /// print("123 hello!".replacing(regex, with: "x")) // "123 xxxxx!"
 /// ```
 @freestanding(expression)
-public macro ReplacingCharacterEntities(_ text: String) -> String = #externalMacro(module: "ReplacingCharacterEntitiesMacros", type: "ReplacingCharacterEntities")
+public macro replacingCharacterEntities(_ text: String) -> String = #externalMacro(module: "ReplacingCharacterEntitiesMacros", type: "ReplacingCharacterEntities")
