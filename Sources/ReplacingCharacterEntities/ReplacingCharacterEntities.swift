@@ -5,7 +5,7 @@ import Foundation
 /// Usage (note that the type annotation is not necessary):
 ///
 /// ```swift// note that the type annotation is not necessary:
-/// let result: String = #ReplacingCharacterEntities("${auml}${alpha}")
+/// let result: String = #replacingCharacterEntities("${auml}${alpha}")
 /// print(result) // "äα"
 /// ```
 @freestanding(expression)

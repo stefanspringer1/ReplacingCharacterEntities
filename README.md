@@ -5,6 +5,6 @@ A macro to replace the usual character entities (cf. [SwiftUtilities](https://gi
 Usage (note that the type annotation is not necessary):
 
 ```swift// note that the type annotation is not necessary:
-let result: String = #ReplacingCharacterEntities("${auml}${alpha}")
+let result: String = #replacingCharacterEntities("${auml}${alpha}")
 print(result) // "äα"
 ```
