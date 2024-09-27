@@ -5,7 +5,21 @@ import SwiftSyntaxMacros
 import Foundation
 import Utilities
 
-extension String: Error {}
+/// An error with a description.
+///
+/// When printing such an error, its descrition is printed.
+struct ReplacingCharacterEntitiesError: LocalizedError, CustomStringConvertible {
+
+    private let message: String
+
+    public init(_ message: String) {
+        self.message = message
+    }
+    
+    public var description: String { message }
+    
+    public var errorDescription: String? { message }
+}
 
 let characterClasses = CharacterClasses()
 
@@ -23,7 +37,7 @@ public struct ReplacingCharacterEntities: ExpressionMacro {
             /// 3. Grab the actual String literal segment.
             case .stringSegment(let literalSegment)? = segments.first
         else {
-            throw "macro requires static string literal"
+            throw ReplacingCharacterEntitiesError("macro requires static string literal")
         }
         
         var text = literalSegment.content.text
