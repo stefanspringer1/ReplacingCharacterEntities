@@ -8,11 +8,12 @@ final class ReplacingCharacterEntitiesTests: XCTestCase {
 
     func test1() throws {
         // note that the type annotation is not necessary:
-        let result: String = #replacingCharacterEntities(#"&auml;&alpha;\&alpha;"#)
+        let result: String = #replacingCharacterEntities(#"&auml;&alpha;\&alpha;\\\\&alpha;"#)
         XCTAssertEqual(
             result,
-            "äα&alpha;"
+            #"äα&alpha;\α"#
         )
+        print(result)
     }
     
 }
