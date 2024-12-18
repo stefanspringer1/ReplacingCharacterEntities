@@ -6,5 +6,5 @@ Usage (note that the type annotation is not necessary):
 
 ```swift// note that the type annotation is not necessary:
 let result: String = #replacingCharacterEntities(#"&auml;&alpha;\&alpha;"#)
-print(result) // "äα"
+print(result) // "äα&alpha;"
 ```
