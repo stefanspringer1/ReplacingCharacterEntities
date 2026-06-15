@@ -44,7 +44,7 @@ public struct ReplacingCharacterEntities: ExpressionMacro {
         
         text = try text.replacingCharacterEntitiesWithString()
         
-        let expr: ExprSyntax = "\"\(raw: text)\""
+        let expr: ExprSyntax = "#\"\(raw: text)\"#"
         return ExprSyntax(expr)
 
     }
